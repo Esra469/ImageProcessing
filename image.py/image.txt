@@ -1,0 +1,230 @@
+#list farklı tarzlarda olur[1,2,3]
+#tupe->değiştiriliemz sıralı sayı sistemleirdir(123)
+"""
+tuple_xyz=(1,2,3)
+x,y,z=tuple_xyz
+print(x,y,z)
+"""
+#deque ->boyutu öncden belirernir önden ve arkadan veri eklenebilir veya çıkarılabilir
+"""
+deque kütüphanesi çağrilmali mesela;
+from collections import deque
+dq=deque(maxlen=3)->boyut verdim
+dp.append(1)
+print(dp) ->sondan eleman ekleme
+dp.appendleft(2)->soldan eleman ekleme
+"""
+
+#dictionary
+"""
+bir çeşit karma tablo türüdür {anahtar,değer}
+{"anahtar" :değer} (büyük küçük harf duyarliliği vardir)
+print(dictionary.key())
+
+if-else yapilari - döngüler
+
+for i in range(1-11)
+print(i)
+
+tup1=((1,2,3),(3,4,5))
+for x,y,z in tup1:
+    print(x,y,z)
+"""
+#fonksiyonlar
+""""
+def fonkadi(parametreler):
+-return sayesinde değişkeni dişarda da kullanabiliyorsun
+def daire_Cevresi(r,pi=3.14):
+   parameters
+   r:int-daire yariçap
+   pi:float -pi
+   return
+   daire_cevresi:float-daire_çevresi
+   daire_cevre=2*pi*r
+   return daire_cevre
+
+global değişkeni ile fonk dişinda ve içinde değişkenler tanimlanabilir
+
+lambda fonksiyonlar ->küçük ve anonim bir işlmedir
+fonk basit bir şekilde yazmak gibi
+fonksiyon_lambda=lambda x,y,x:x*y*z
+fonksiyon_lambda(2,3,4 )->fonksiyon oluşturmaktan kurtuluyoruz
+    
+"""
+#yield
+"""
+-iterasyon->yineleme
+-generator->yineleyicileir ->değerleri bellekte saklamaz yri gelince yeniden üretir
+generator=(x for x in range(1,4))
+for i in generator:
+print(i)
+->fonksiyon eğer return olarak generator döndürecek ise bunu yield ile yapar
+
+"""
+
+#numpy kütüphanesi
+"""
+matrisler için hesaplama kolayliği sağlar
+import numpy as np
+dizi=np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
+print(dizi)
+print(dizi.shape)//array boyutu
+dizi2=dizi.reshape(3,5)
+print("şekil:",dizi2.shape)
+print("boyut",dizi2.ndim)
+print("veri tipi",dizi2.dtype.name)
+print("boy",dizi2.size)//kullandiğimiz matris boyunu öğrenmek için daha çok 
+
+sifir_dizi=np.zeros(3,4)->3,4 lük 0 lardan oluşan dizi oluşur
+bir_dizi=np.ones(3,4)->birlerden oluşan matris
+bos_dizi=np.empty(3,4)->0 lik matris
+
+#arange(x,y,basamak)
+dizi_aralik=np.arange(5,50,10)->10,15,20,25,30,40,45
+
+#linspace(x,y,basamak)
+dizi_bosluk=np.linspace(10,20,5)->10,12.5,15,17.5,20
+
+#rastegele sayi üretme [0,1] arasinda sürekli uniform 3*3
+rastgele_dizi=np.random.random((3,3))
+print(rastgele_dizi)
+
+dizi=np.array([1,2,3,4,5])
+print(dizi[0:4])->dizinin ilk 4 elemani
+
+2 boyutlu bir dizide 1. satie tüm elemanlari almak için meslea
+print(dizi[:,1])
+
+dizinin son satir tüm sütünlari
+print(dizi[-1,:])
+
+diziyi vektör haline getirme
+vektor=dizi.ravel()
+
+maksimum_sayi=vektor.argmax()->vektördeki max değerin argümani
+"""
+
+#Pandas kütüphanesi
+"""
+hizli güçlü ve esnek 
+
+import pandas as pd
+#süzlük oluştur
+
+dictionary={"isim":["ali","veli","murat"]
+            "yas":["10,11,12]}
+veri=pd.DataFrame(dictionary)
+print(veri)
+
+print(veri.head())->ilk 5 satiri yazdirir
+print(veri.columns)->sütün 
+print(veri.info)->veri hakinda bilgi elde etmek için
+#istatistiksel özellikler
+print(veri.describe())->bilgiler
+#sütüun ekleme
+veri["şehir"]=["ankara","istanbul","konya"]
+print(veri)
+#yaş ve şehir arasi sütün ve satir
+print(veri.log[:2,"yas":"şehir])
+
+yaş ve şehir arasi sütün ve 3 satir
+print(veri.log[:2,["yaş","isim]])
+
+pandas da Iloc son sayi dahil değil ama loc da dahil
+
+#filtreleme
+dictionary={"isim":["ali","veli","asli"]
+            "yas":[15,36,28]
+            "sehir":["ankara","batman","ankara"]}
+veri=pd.Dataframe(dictionary)
+print(veri)
+filtre1=veri.yas>22 ->true false döndürecek
+filtrelenmiş_veri=veri[filtre1]
+print(filtrelenmiş_veri)->22 yaşindan büyük olan kişileri verir
+
+#ortalama yas
+ortalama_yas=veri.yas.mean()
+veri=["yaş_grubu"]=["küçük" if ortalama_yas >i else "büyük" for i in veri.yas]->burdaca bir if else bloğu var aslinda if den önceki if şarti else den sonraki else şarti
+
+#birleştirme
+sözlük2={"isim":["ali","veli","asli"]
+            "yas":[15,36,28]
+            "sehir":["ankara","batman","ankara"]}
+veri2=pd.Dataframe(sözlük2)
+ #dikey
+ veri_dikey=pd.concat([veri1,veri2],axis=0)
+"""
+#matplotlib kütüphanesi
+"""
+veri grafikleştirme,görselleştirme yapilir
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.array([1,2,3,4])
+y=np.array([4,3,2,1])
+
+plt.figure()
+plt.plot(x,y,color="purple",alpha=0.7,label="line")
+plt.scatter(x,y,color="bule",alpha=0.4,label="scatter")
+plt.title("matplotlib")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True)
+plt.xticks([0,1,2,3,4,5])
+plt.legend()
+plt.show()
+
+
+fig,axes=plt.subplots(2,1,figsize=(9,7))
+fig.subplots_adjust(hspace=0.5)
+x=[1,2,3,4,5,6,7,8,9,10]
+y=[10,9,8,7,6,5,4,3,2,1]
+
+axes[0].scatter(x,y)
+axes[0].set_title("sub-1")
+axes[0].set_ylabel("sub-1 y")
+axes[0].set_xlabel("sub-1 x")
+
+axes[1].scatter(y,x)
+axes[1].set_title("sub-2")
+axes[1].set_ylabel("sub-2 y")
+axes[1].set_xlabel("sub-2 x")
+
+#random resim
+plt.figure()
+img=np.random.random((50,50))
+plt.imshow(img,camp="gray")->manuel olarak renk atama   
+plt.axis("off")->eksen isimleri
+plt.show()
+
+"""
+#os kütüphanesi
+"""
+import os
+print(os.name)->hangi işletim sistemi
+currentDir=os.getcwd()->dosya yolu
+print(currentDir)
+#new folder
+folder_name="new_folder"
+os.mkdir(folder_name)
+new_folder_name="new_folder_2"
+os.rename(folder_name,new_folder_name)
+
+os.chdir(currentDir+"//"+new_folder_name)
+print(os.getcwd())
+
+os.chdir(currentDir)
+print(os.getcwd())
+
+files=os.listdir()
+for f in files:
+    if f.endswith(".py"):
+        print(f)
+os.rmdir(new_folder_name)
+for i in os.walk(currentDir):
+    print(i)
+os.path.exists("python_hatirlatma.py")
+
+
+"""
+    
+

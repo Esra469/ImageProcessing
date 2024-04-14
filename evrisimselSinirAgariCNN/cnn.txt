@@ -1,0 +1,35 @@
+cnn görüntü üzerinde siniflandrma, nesne tespiti ve takibi problemlerini çözmek için özelleşmiştir
+"""
+cnn bir temel görevi olarak bir özniteili çikarimi 2 de siniflandirma denebilir öncelikle resmim bir 
+evrişmden geçirilir ve öznitelik haritasi çikarilir. bu en baş yani low katmanidir bunun gibi 2-3 katmandan 
+daah geçer en son da siniflandirma yapilir ve sonuç olarak 1 ve 0 gibi değerler elde edilir
+özellik haritalarinin içinde aktivasyon fonksiyonudan sonra piksel ekleme var
+
+evrişim katmanindan sonra aktivasyon fonksiyonu olarak ReLu kullaniyoruz.bu aktivasyon fonksiyonu dogrusalligi
+kirarak ,modelimizin deogrusal olmayan yapilari ögrenmesini saglar
+147->147 -11->0 değer gelir
+
+
+Piksel ekleme:
+orijinal resmin etrafina çerçeve ekleniyor çerceve dişina 0 lar ekleniyor ve boyut azalmasi olmuyor
+
+Ortaklama(seyreltme):
+Asagi örnekleme veya alt örnekleme yapar (parametre sayisini azaltir)
+ölçek veya yön değişligine göre degeişmeyen özellkleri algilar
+ezberleme (over-fitting) kontrol eder
+
+Düzelştirme:
+iki boyutlu veriyi vektör haline getirme
+
+Tam Baglanti:
+Bir katmandaki nöronlarin önceki katmandaki tüm aktivasyonlarla baglantilari vardir.Mesela yapay sinri aglari
+bir yapida ne kadar gizli katman varsa o kadar dern bir yapi ar demektir.
+
+Dropout(seyreltme)
+Rastgele seçilen nöronlarin egitim sirasinda göz ardi edildigi bir tekniktir.ezberlemeyi (over-fitting) önler
+
+veri arttirma
+Ezberleme sorununu önlemek için, el yazsi rakam veri setimizi yapay olarakk genişletmemiz gerekiyr
+rakam varyasyonlarini yendien oluşturmak ve eğitim verilerini küçük dönüşümler ile değiştirebilirz
+mesela sayi ortalanmamiştir,ölcek ayni degildir veya görrüntü döndürülür.
+"""
