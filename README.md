@@ -1,1 +1,1 @@
-Görüntü işleme adımlarını göreceğiz
+Görüntü işleme işlemlerini işleyeceğiz
