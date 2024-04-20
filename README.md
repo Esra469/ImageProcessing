@@ -1,0 +1,1 @@
+Görüntü işleme Yöntemlerine bakacağım
