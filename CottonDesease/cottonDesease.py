@@ -26,3 +26,10 @@
 #burada aldığın doğruluk değerinden yola çıkarak eğitilmiş verini değiştirebilirsin mesela inceptionV3 resnet152V2 gibi seçerken paramerdeler ve doğruluk değerleri dikkate alınmalıdır.
 
 #rapids incele
+#bunu yaparken gördün direkt buraya push layamıyorum önce pull yapman gerekiyor3
+#git fetch origin master
+#git pull origin master
+#git add .
+#git commit -m 'your commit message'
+#git push origin master
+#böyle
