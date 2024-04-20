@@ -1,1 +1,1 @@
-Görüntü işleme yöntemlerini işleyeceğiz
+Görüntü işleme Yöntemlerine bakacağım
