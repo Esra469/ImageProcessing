@@ -33,3 +33,5 @@
 #git commit -m 'your commit message'
 #git push origin master
 #böyle
+
+#bunu proje için bak
