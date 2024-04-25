@@ -33,5 +33,7 @@
 #git commit -m 'your commit message'
 #git push origin master
 #böyle
+#bunu başka bir repoda oluşturabilirsin
+
 
 #bunu proje için bak
