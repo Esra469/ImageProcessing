@@ -1,1 +1,2 @@
-Görüntü işleme Yöntemlerine bakacağım
+Bu projeyi public yap
+
